@@ -1,7 +1,6 @@
 
 <!doctype html>
 <html lang="en">
-  {% load staticfiles %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,8 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>OneBookOne</title>
-    <link rel="icon" type="image/ico" href="{%static '1b1.png'%}" />
+    <title>Album example for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -22,17 +20,17 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="{%url 'home'%}">OneBookOne</a>
+            <a class="navbar-brand" href="{% url 'home'%}">OneBookOne</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link active" href="https://www.youtube.com/channel/UC3osQYEtp53TzJ0QamLZavA?view_as=subscriber">YouTube</a>
+                <a class="nav-item nav-link active" href="#">YouTube</a>
                 <a class="nav-item nav-link active" href="https://www.facebook.com/One-Book-One-170955233835372/?modal=admin_todo_tour">Facebook</a>
                 <a class="nav-item nav-link active" href="#">Twitter</a>
-                <a class="nav-item nav-link active" href="https://github.com/amitsharma-007">GitHub</a>
-                <a class="nav-item nav-link active" href="{% static "Results.pdf" %}">Resume</a>
+                <a class="nav-item nav-link active" href="#">GitHub</a>
+                <a class="nav-item nav-link active" href="#">Resume</a>
               </div>
             </div>
           </nav>
@@ -40,34 +38,23 @@
 
     <main role="main">
 
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Amit Sharma</h1>
-          <p class="lead text-muted">Hi! I am Amit Sharma. I am a ML, IoT, Robotics, Computer Vision and Python Framworks enthusiast. This blog posts will introduce you to the work that I have done.</p>
-          <p>
-            <a href="mailto:justseven@rediffmail.com" class="btn btn-primary my-2">Contact Me!</a>
-            <a href="#" class="btn btn-secondary my-2">Support Me!</a>
-          </p>
-        </div>
-      </section>
-
-      <div class="album py-5 bg-light">
-        <div class="container">
-          <div class="row">
-            {% for job in jobs.all %}
-                <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img class="card-img-top" src = "{{job.image.url}}"/>
-                    <div class="card-body">
-                    <p class="card-text">{{job.summary}}</p>
-                    </div>
-                </div>
-                </div>
-            {%endfor%}
-          </div>
-        </div>
-      </div>
-
+      <h1 class="text-center pt-3">This page comprised of all the blogs. Click on the links to dive in the complete details associated with the blogs.</h1>
+      <br/>
+      <br/>
+      
+      <h2>All posts:  </h2>
+      <hr/>
+      <hr/>
+      {%for blog in blogs.all%}
+        <a href = "{% url 'detail' blog.id %}"> <h3>{{blog.title}}</h3> </a>
+        <br/>
+        {{blog.pub_date_pretty}}
+        <br/>
+        <img class = "img-fluid" src="{{blog.image.url}}" height="200" width="200"/>
+        <br/>
+        <p>{{blog.summary}}</p>
+        <hr/>
+      {%endfor%}
     </main>
     <footer class="text-muted">
       <div class="container text-center">
