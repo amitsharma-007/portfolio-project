@@ -1,0 +1,35 @@
+{% extends 'blog/base.html'%}
+
+{% block blog-content%}
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Amit Sharma</h1>
+        <p class="lead text-muted">Hi! I am Amit Sharma. I am a ML, IoT, Robotics, Computer Vision and Python Framworks enthusiast. This blog posts will introduce you to the work that I have done.</p>
+        <p>
+          <a href="mailto:justseven@rediffmail.com" class="btn btn-primary my-2">Contact Me!</a>
+          <a href="#" class="btn btn-secondary my-2">Support Me!</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          {% for blog in blogs.all %}
+          <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ blog.image.url }}">
+            <div class="media-body">
+              <div class="article-metadata">
+                <h4><a class="mr-2" href="{% url 'detail' blog.id %}">{{ blog.title}}</a></h4>
+                <small class="text-muted">{{ blog.pub_date|date:"F d, Y" }}</small>
+              </div>
+              
+              <p class="article-content">{{ blog.body }}</p>
+            </div>
+          </article>
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+
+{% endblock blog-content%}

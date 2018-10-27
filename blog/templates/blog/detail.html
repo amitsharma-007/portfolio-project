@@ -1,66 +1,521 @@
+{%extends 'blog/base.html'%}
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+{% block blog-content %}
+    <br/>
+    <section>
+        <br/>
+        <br/>
+        <h1>{{blog.title}}</h1>
+        <br/>
+        <h3>{{blog.pub_date_pretty}}</h3>
+        <br/>
+        <img class = "img-fluid" src="{{blog.image.url}}" height="400" width="800" />
+        <br/>
+    </section>
+    <br/>
+    <section>
+        {%if blog.introduction%}
+            <p>{{blog.introduction}}</p>
+        {%endif%}
+    </section>
+    <br/>
+    <section>
+        {%if blog.prerequisite%}
+            <h3>{{blog.prerequisite}}</h3>
+        {%endif%}
+     
+        <ul style="list-style-type:disc"></ul>
+            {%if blog.pr_list1%}
+                <li>{{blog.pr_list1}}</li>
+            {%endif%}
+            {%if blog.pr_list2%}
+                <li>{{blog.pr_list2}}</li>
+            {%endif%}
+            {%if blog.pr_list3%}
+                <li>{{blog.pr_list3}}</li>
+            {%endif%}
+            {%if blog.pr_list4%}
+                <li>{{blog.pr_list4}}</li>
+            {%endif%}
+            {%if blog.pr_list5%}
+                <li>{{blog.pr_list5}}</li>
+            {%endif%}
+            {%if blog.pr_list6%}
+                <li>{{blog.pr_list6}}</li>
+            {%endif%}
+            {%if blog.pr_list7%}
+                <li>{{blog.pr_list7}}</li>
+            {%endif%}
+            {%if blog.pr_list8%}
+                <li>{{blog.pr_list8}}</li>
+            {%endif%}
+            {%if blog.pr_list9%}
+                <li>{{blog.pr_list9}}</li>
+            {%endif%}
+            {%if blog.pr_list10%}
+                <li>{{blog.pr_list10}}</li>
+            {%endif%}
+        </ul>
+    </section>
+    <br/>
+    <section>
+        {%if blog.head1%}
+            <h3>{{blog.head1}}</h3>
+        {%endif%}
+        {%if blog.content1%}
+            <p>{{blog.content1}}</p>
+        {%endif%}
+     
+        <ul style="list-style-type:disc"></ul>
+            {%if blog.h1_list1%}
+                <li>{{blog.h1_list1}}</li>
+            {%endif%}
+            {%if blog.h1_list2%}
+                <li>{{blog.h1_list2}}</li>
+            {%endif%}
+            {%if blog.h1_list3%}
+                <li>{{blog.h1_list3}}</li>
+            {%endif%}
+            {%if blog.h1_list4%}
+                <li>{{blog.h1_list4}}</li>
+            {%endif%}
+            {%if blog.h1_list5%}
+                <li>{{blog.h1_list5}}</li>
+            {%endif%}
+            {%if blog.h1_list6%}
+                <li>{{blog.h1_list6}}</li>
+            {%endif%}
+            {%if blog.h1_list7%}
+                <li>{{blog.h1_list7}}</li>
+            {%endif%}
+            {%if blog.h1_list8%}
+                <li>{{blog.h1_list8}}</li>
+            {%endif%}
+            {%if blog.h1_list9%}
+                <li>{{blog.h1_list9}}</li>
+            {%endif%}
+            {%if blog.h1_list10%}
+                <li>{{blog.h1_list10}}</li>
+            {%endif%}
+        </ul>
+        <br/>
+        {%if blog.image1%}
+            <img class = "img-fluid" src="{{blog.image1.url}}" height="400" width="800" />
+        {%endif%}
+    </section>
+    <br/>
+    <section>
+        {%if blog.head2%}
+            <h3>{{blog.head2}}</h3>
+        {%endif%}
+        {%if blog.content2%}
+            <p>{{blog.content2}}</p>
+        {%endif%}
+     
+        <ul style="list-style-type:disc"></ul>
+            {%if blog.h2_list1%}
+                <li>{{blog.h2_list1}}</li>
+            {%endif%}
+            {%if blog.h2_list2%}
+                <li>{{blog.h2_list2}}</li>
+            {%endif%}
+            {%if blog.h2_list3%}
+                <li>{{blog.h2_list3}}</li>
+            {%endif%}
+            {%if blog.h2_list4%}
+                <li>{{blog.h2_list4}}</li>
+            {%endif%}
+            {%if blog.h2_list5%}
+                <li>{{blog.h2_list5}}</li>
+            {%endif%}
+            {%if blog.h2_list6%}
+                <li>{{blog.h2_list6}}</li>
+            {%endif%}
+            {%if blog.h2_list7%}
+                <li>{{blog.h2_list7}}</li>
+            {%endif%}
+            {%if blog.h2_list8%}
+                <li>{{blog.h2_list8}}</li>
+            {%endif%}
+            {%if blog.h2_list9%}
+                <li>{{blog.h2_list9}}</li>
+            {%endif%}
+            {%if blog.h2_list10%}
+                <li>{{blog.h2_list10}}</li>
+            {%endif%}
+        </ul>
+        <br/>
+        {%if blog.image2%}
+            <img class = "img-fluid" src="{{blog.image2.url}}" height="400" width="800" />
+        {%endif%}
+    </section>
+    <br/>
+    <section>
+        {%if blog.head3%}
+            <h3>{{blog.head3}}</h3>
+        {%endif%}
+        {%if blog.content3%}
+            <p>{{blog.content3}}</p>
+        {%endif%}
+     
+        <ul style="list-style-type:disc"></ul>
+            {%if blog.h3_list1%}
+                <li>{{blog.h3_list1}}</li>
+            {%endif%}
+            {%if blog.h3_list2%}
+                <li>{{blog.h3_list2}}</li>
+            {%endif%}
+            {%if blog.h3_list3%}
+                <li>{{blog.h3_list3}}</li>
+            {%endif%}
+            {%if blog.h3_list4%}
+                <li>{{blog.h3_list4}}</li>
+            {%endif%}
+            {%if blog.h3_list5%}
+                <li>{{blog.h3_list5}}</li>
+            {%endif%}
+            {%if blog.h3_list6%}
+                <li>{{blog.h3_list6}}</li>
+            {%endif%}
+            {%if blog.h3_list7%}
+                <li>{{blog.h3_list7}}</li>
+            {%endif%}
+            {%if blog.h3_list8%}
+                <li>{{blog.h3_list8}}</li>
+            {%endif%}
+            {%if blog.h3_list9%}
+                <li>{{blog.h3_list9}}</li>
+            {%endif%}
+            {%if blog.h3_list10%}
+                <li>{{blog.h3_list10}}</li>
+            {%endif%}
+        </ul>
+        <br/>
+        {%if blog.image3%}
+            <img class = "img-fluid" src="{{blog.image3.url}}" height="400" width="800" />
+        {%endif%}
+    </section>
+    <br/>
+    <section>
+        {%if blog.head4%}
+            <h3>{{blog.head4}}</h3>
+        {%endif%}
+        {%if blog.content4%}
+            <p>{{blog.content4}}</p>
+        {%endif%}
+     
+        <ul style="list-style-type:disc"></ul>
+            {%if blog.h4_list1%}
+                <li>{{blog.h4_list1}}</li>
+            {%endif%}
+            {%if blog.h4_list2%}
+                <li>{{blog.h4_list2}}</li>
+            {%endif%}
+            {%if blog.h4_list3%}
+                <li>{{blog.h4_list3}}</li>
+            {%endif%}
+            {%if blog.h4_list4%}
+                <li>{{blog.h4_list4}}</li>
+            {%endif%}
+            {%if blog.h4_list5%}
+                <li>{{blog.h4_list5}}</li>
+            {%endif%}
+            {%if blog.h4_list6%}
+                <li>{{blog.h4_list6}}</li>
+            {%endif%}
+            {%if blog.h4_list7%}
+                <li>{{blog.h4_list7}}</li>
+            {%endif%}
+            {%if blog.h4_list8%}
+                <li>{{blog.h4_list8}}</li>
+            {%endif%}
+            {%if blog.h4_list9%}
+                <li>{{blog.h4_list9}}</li>
+            {%endif%}
+            {%if blog.h4_list10%}
+                <li>{{blog.h4_list10}}</li>
+            {%endif%}
+        </ul>
+        <br/>
+        {%if blog.image4%}
+            <img class = "img-fluid" src="{{blog.image4.url}}" height="400" width="800" />
+        {%endif%}
+    </section>
+    <br/>
+    <section>
+        {%if blog.head5%}
+            <h3>{{blog.head5}}</h3>
+        {%endif%}
+        {%if blog.content5%}
+            <p>{{blog.content5}}</p>
+        {%endif%}
+     
+        <ul style="list-style-type:disc"></ul>
+            {%if blog.h5_list1%}
+                <li>{{blog.h5_list1}}</li>
+            {%endif%}
+            {%if blog.h5_list2%}
+                <li>{{blog.h5_list2}}</li>
+            {%endif%}
+            {%if blog.h5_list3%}
+                <li>{{blog.h5_list3}}</li>
+            {%endif%}
+            {%if blog.h5_list4%}
+                <li>{{blog.h5_list4}}</li>
+            {%endif%}
+            {%if blog.h5_list5%}
+                <li>{{blog.h5_list5}}</li>
+            {%endif%}
+            {%if blog.h5_list6%}
+                <li>{{blog.h5_list6}}</li>
+            {%endif%}
+            {%if blog.h5_list7%}
+                <li>{{blog.h5_list7}}</li>
+            {%endif%}
+            {%if blog.h5_list8%}
+                <li>{{blog.h5_list8}}</li>
+            {%endif%}
+            {%if blog.h5_list9%}
+                <li>{{blog.h5_list9}}</li>
+            {%endif%}
+            {%if blog.h5_list10%}
+                <li>{{blog.h5_list10}}</li>
+            {%endif%}
+        </ul>
+        <br/>
+        {%if blog.image5%}
+            <img class = "img-fluid" src="{{blog.image5.url}}" height="400" width="800" />
+        {%endif%}
+    </section>
+    <br/>
+    <section>
+        {%if blog.head6%}
+            <h3>{{blog.head6}}</h3>
+        {%endif%}
+        {%if blog.content6%}
+            <p>{{blog.content6}}</p>
+        {%endif%}
+     
+        <ul style="list-style-type:disc"></ul>
+            {%if blog.h6_list1%}
+                <li>{{blog.h6_list1}}</li>
+            {%endif%}
+            {%if blog.h6_list2%}
+                <li>{{blog.h6_list2}}</li>
+            {%endif%}
+            {%if blog.h6_list3%}
+                <li>{{blog.h6_list3}}</li>
+            {%endif%}
+            {%if blog.h6_list4%}
+                <li>{{blog.h6_list4}}</li>
+            {%endif%}
+            {%if blog.h6_list5%}
+                <li>{{blog.h6_list5}}</li>
+            {%endif%}
+            {%if blog.h6_list6%}
+                <li>{{blog.h6_list6}}</li>
+            {%endif%}
+            {%if blog.h6_list7%}
+                <li>{{blog.h6_list7}}</li>
+            {%endif%}
+            {%if blog.h6_list8%}
+                <li>{{blog.h6_list8}}</li>
+            {%endif%}
+            {%if blog.h6_list9%}
+                <li>{{blog.h6_list9}}</li>
+            {%endif%}
+            {%if blog.h6_list10%}
+                <li>{{blog.h6_list10}}</li>
+            {%endif%}
+        </ul>
+        <br/>
+        {%if blog.image6%}
+            <img class = "img-fluid" src="{{blog.image6.url}}" height="400" width="800" />
+        {%endif%}
+    </section>
+    <br/>
+    <section>
+        {%if blog.head7%}
+            <h3>{{blog.head7}}</h3>
+        {%endif%}
+        {%if blog.content7%}
+            <p>{{blog.content7}}</p>
+        {%endif%}
+     
+        <ul style="list-style-type:disc"></ul>
+            {%if blog.h7_list1%}
+                <li>{{blog.h7_list1}}</li>
+            {%endif%}
+            {%if blog.h7_list2%}
+                <li>{{blog.h7_list2}}</li>
+            {%endif%}
+            {%if blog.h7_list3%}
+                <li>{{blog.h7_list3}}</li>
+            {%endif%}
+            {%if blog.h7_list4%}
+                <li>{{blog.h7_list4}}</li>
+            {%endif%}
+            {%if blog.h7_list5%}
+                <li>{{blog.h7_list5}}</li>
+            {%endif%}
+            {%if blog.h7_list6%}
+                <li>{{blog.h7_list6}}</li>
+            {%endif%}
+            {%if blog.h7_list7%}
+                <li>{{blog.h7_list7}}</li>
+            {%endif%}
+            {%if blog.h7_list8%}
+                <li>{{blog.h7_list8}}</li>
+            {%endif%}
+            {%if blog.h7_list9%}
+                <li>{{blog.h7_list9}}</li>
+            {%endif%}
+            {%if blog.h7_list10%}
+                <li>{{blog.h7_list10}}</li>
+            {%endif%}
+        </ul>
+        <br/>
+        {%if blog.image7%}
+            <img class = "img-fluid" src="{{blog.image7.url}}" height="400" width="800" />
+        {%endif%}
+    </section>
+    <br/>
+    <section>
+        {%if blog.head8%}
+            <h3>{{blog.head8}}</h3>
+        {%endif%}
+        {%if blog.content8%}
+            <p>{{blog.content8}}</p>
+        {%endif%}
+     
+        <ul style="list-style-type:disc"></ul>
+            {%if blog.h8_list1%}
+                <li>{{blog.h8_list1}}</li>
+            {%endif%}
+            {%if blog.h8_list2%}
+                <li>{{blog.h8_list2}}</li>
+            {%endif%}
+            {%if blog.h8_list3%}
+                <li>{{blog.h8_list3}}</li>
+            {%endif%}
+            {%if blog.h8_list4%}
+                <li>{{blog.h8_list4}}</li>
+            {%endif%}
+            {%if blog.h8_list5%}
+                <li>{{blog.h8_list5}}</li>
+            {%endif%}
+            {%if blog.h8_list6%}
+                <li>{{blog.h8_list6}}</li>
+            {%endif%}
+            {%if blog.h8_list7%}
+                <li>{{blog.h8_list7}}</li>
+            {%endif%}
+            {%if blog.h8_list8%}
+                <li>{{blog.h8_list8}}</li>
+            {%endif%}
+            {%if blog.h8_list9%}
+                <li>{{blog.h8_list9}}</li>
+            {%endif%}
+            {%if blog.h8_list10%}
+                <li>{{blog.h8_list10}}</li>
+            {%endif%}
+        </ul>
+        <br/>
+        {%if blog.image8%}
+            <img class = "img-fluid" src="{{blog.image8.url}}" height="400" width="800" />
+        {%endif%}
+    </section>
+    <br/>
+    <section>
+        {%if blog.head9%}
+            <h3>{{blog.head9}}</h3>
+        {%endif%}
+        {%if blog.content9%}
+            <p>{{blog.content9}}</p>
+        {%endif%}
+     
+        <ul style="list-style-type:disc"></ul>
+            {%if blog.h9_list1%}
+                <li>{{blog.h9_list1}}</li>
+            {%endif%}
+            {%if blog.h9_list2%}
+                <li>{{blog.h9_list2}}</li>
+            {%endif%}
+            {%if blog.h9_list3%}
+                <li>{{blog.h9_list3}}</li>
+            {%endif%}
+            {%if blog.h9_list4%}
+                <li>{{blog.h9_list4}}</li>
+            {%endif%}
+            {%if blog.h9_list5%}
+                <li>{{blog.h9_list5}}</li>
+            {%endif%}
+            {%if blog.h9_list6%}
+                <li>{{blog.h9_list6}}</li>
+            {%endif%}
+            {%if blog.h9_list7%}
+                <li>{{blog.h9_list7}}</li>
+            {%endif%}
+            {%if blog.h9_list8%}
+                <li>{{blog.h9_list8}}</li>
+            {%endif%}
+            {%if blog.h9_list9%}
+                <li>{{blog.h9_list9}}</li>
+            {%endif%}
+            {%if blog.h9_list10%}
+                <li>{{blog.h9_list10}}</li>
+            {%endif%}
+        </ul>
+        <br/>
+        {%if blog.image9%}
+            <img class = "img-fluid" src="{{blog.image9.url}}" height="400" width="800" />
+        {%endif%}
+    </section>
+    <br/>
+    <section>
+        {%if blog.head10%}
+            <h3>{{blog.head10}}</h3>
+        {%endif%}
+        {%if blog.content10%}
+            <p>{{blog.content10}}</p>
+        {%endif%}
+     
+        <ul style="list-style-type:disc"></ul>
+            {%if blog.h10_list1%}
+                <li>{{blog.h10_list1}}</li>
+            {%endif%}
+            {%if blog.h10_list2%}
+                <li>{{blog.h10_list2}}</li>
+            {%endif%}
+            {%if blog.h10_list3%}
+                <li>{{blog.h10_list3}}</li>
+            {%endif%}
+            {%if blog.h10_list4%}
+                <li>{{blog.h10_list4}}</li>
+            {%endif%}
+            {%if blog.h10_list5%}
+                <li>{{blog.h10_list5}}</li>
+            {%endif%}
+            {%if blog.h10_list6%}
+                <li>{{blog.h10_list6}}</li>
+            {%endif%}
+            {%if blog.h10_list7%}
+                <li>{{blog.h10_list7}}</li>
+            {%endif%}
+            {%if blog.h10_list8%}
+                <li>{{blog.h10_list8}}</li>
+            {%endif%}
+            {%if blog.h10_list9%}
+                <li>{{blog.h10_list9}}</li>
+            {%endif%}
+            {%if blog.h10_list10%}
+                <li>{{blog.h10_list10}}</li>
+            {%endif%}
+        </ul>
+        <br/>
+        {%if blog.image10%}
+            <img class = "img-fluid" src="{{blog.image10.url}}" height="400" width="800" />
+        {%endif%}
+    </section>
 
-    <title>Album example for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-
-  </head>
-
-  <body>
-
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">OneBookOne</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link active" href="#">YouTube</a>
-                <a class="nav-item nav-link active" href="#">Facebook</a>
-                <a class="nav-item nav-link active" href="#">Twitter</a>
-                <a class="nav-item nav-link active" href="#">GitHub</a>
-                <a class="nav-item nav-link active" href="#">Resume</a>
-              </div>
-            </div>
-          </nav>
-    </header>
-
-    <main role="main">
-
-      <h1 class="text-center pt-3">{{blog.title}}</h1>
-      <br/>
-      <br/>
-      <h2>{{blog.pub_date_pretty}}</h2>
-      <br/>
-      <img class = "img-fluid" src="{{blog.image.url}}" />
-      <br/>
-      <p>{{blog.body}}</p>
-    </main>
-    <footer class="text-muted">
-      <div class="container text-center">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>&copy; OneBookOne {% now "Y"%}</p>
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
-</html>
+{% endblock blog-content %}  
